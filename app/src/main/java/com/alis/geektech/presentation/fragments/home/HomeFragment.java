@@ -14,9 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.alis.geektech.R;
-import com.alis.geektech.presentation.fragments.home.direct.DirectFragment;
+import com.alis.geektech.presentation.fragments.home.inoffice.InOfficeFragment;
 import com.alis.geektech.presentation.fragments.home.events.EventsFragment;
-import com.alis.geektech.presentation.fragments.home.qrscanner.QRScannerFragment;
 
 public class HomeFragment extends Fragment {
 
@@ -41,7 +40,6 @@ public class HomeFragment extends Fragment {
     private void createViewPager(View view) {
         viewPager = view.findViewById(R.id.view_pager_events);
         viewPager.setAdapter(new HomePagerAdapter(getChildFragmentManager()));
-        viewPager.setCurrentItem(1);
     }
 
     public class HomePagerAdapter extends FragmentPagerAdapter {
@@ -60,13 +58,10 @@ public class HomeFragment extends Fragment {
             Fragment fragment;
             switch (position) {
                 case 0:
-                    fragment = new QRScannerFragment();
-                    break;
-                case 1:
                     fragment = new EventsFragment();
                     break;
                 default:
-                    fragment = new DirectFragment();
+                    fragment = new InOfficeFragment();
                     break;
             }
             return fragment;
@@ -74,7 +69,7 @@ public class HomeFragment extends Fragment {
 
         @Override
         public int getCount() {
-            return 3;
+            return 2;
         }
     }
 }

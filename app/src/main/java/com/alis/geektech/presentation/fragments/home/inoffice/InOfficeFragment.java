@@ -1,4 +1,4 @@
-package com.alis.geektech.presentation.fragments.home.direct;
+package com.alis.geektech.presentation.fragments.home.inoffice;
 
 import android.os.Bundle;
 
@@ -12,15 +12,15 @@ import android.view.ViewGroup;
 
 import com.alis.geektech.R;
 
-public class DirectFragment extends Fragment {
+public class InOfficeFragment extends Fragment {
 
-    public DirectFragment() {
+    public InOfficeFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_direct, container, false);
+        return inflater.inflate(R.layout.fragment_in_office, container, false);
     }
 
     @Override
