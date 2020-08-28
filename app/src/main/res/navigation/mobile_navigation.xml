@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/navigation_events">
+    app:startDestination="@id/navigation_home">
 
     <fragment
-        android:id="@+id/navigation_events"
+        android:id="@+id/navigation_home"
         android:name="com.alis.geektech.presentation.fragments.home.HomeFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_home" />
@@ -18,16 +18,22 @@
         tools:layout="@layout/fragment_profile" />
 
     <fragment
-        android:id="@+id/directFragment"
-        android:name="com.alis.geektech.presentation.fragments.home.direct.DirectFragment"
-        android:label="fragment_direct"
-        tools:layout="@layout/fragment_direct" />
-
-    <fragment
         android:id="@+id/QRScannerFragment"
         android:name="com.alis.geektech.presentation.fragments.home.qrscanner.QRScannerFragment"
         android:label="fragment_qr_scanner"
         tools:layout="@layout/fragment_qr_scanner" />
+
+    <fragment
+        android:id="@+id/inOfficeFragment"
+        android:name="com.alis.geektech.presentation.fragments.home.inoffice.InOfficeFragment"
+        android:label="fragment_in_office"
+        tools:layout="@layout/fragment_in_office" />
+
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.alis.geektech.presentation.fragments.home.events.EventsFragment"
+        android:label="fragment_events"
+        tools:layout="@layout/fragment_events" />
 
 
 </navigation>
