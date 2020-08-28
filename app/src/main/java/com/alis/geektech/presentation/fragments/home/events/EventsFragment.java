@@ -1,4 +1,4 @@
-package com.alis.geektech.presentation.fragments.events;
+package com.alis.geektech.presentation.fragments.home.events;
 
 import android.os.Bundle;
 

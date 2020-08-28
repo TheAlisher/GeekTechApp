@@ -3,14 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.fragments.home.events.EventsFragment">
+    android:orientation="vertical"
+    tools:context=".presentation.fragments.home.HomeFragment">
 
-    <TextView
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager_events"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="EventsFragment"
-        android:textSize="40sp" />
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>

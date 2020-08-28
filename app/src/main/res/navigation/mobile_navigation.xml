@@ -7,15 +7,27 @@
 
     <fragment
         android:id="@+id/navigation_events"
-        android:name="com.alis.geektech.presentation.fragments.events.EventsFragment"
+        android:name="com.alis.geektech.presentation.fragments.home.HomeFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_events" />
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.alis.geektech.presentation.fragments.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/directFragment"
+        android:name="com.alis.geektech.presentation.fragments.home.direct.DirectFragment"
+        android:label="fragment_direct"
+        tools:layout="@layout/fragment_direct" />
+
+    <fragment
+        android:id="@+id/QRScannerFragment"
+        android:name="com.alis.geektech.presentation.fragments.home.qrscanner.QRScannerFragment"
+        android:label="fragment_qr_scanner"
+        tools:layout="@layout/fragment_qr_scanner" />
 
 
 </navigation>
