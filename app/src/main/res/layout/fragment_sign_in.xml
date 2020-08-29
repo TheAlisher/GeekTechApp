@@ -1,42 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".presentation.auth.SignInFragment">
+    android:padding="10dp"
+    tools:context=".presentation.authentication.SignInFragment">
 
-    <TextView
+    <EditText
+        android:id="@+id/edit_signIn_username"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="SignInFragment"
-        android:textSize="30sp" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autofillHints="@string/hint_enter_email_or_phone_number"
+        android:hint="@string/hint_enter_email_or_phone_number"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/edit_signIn_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autofillHints="@string/hint_enter_password"
+        android:hint="@string/hint_enter_password"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/button_signIn"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
         android:text="@string/button_sign_in"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_signIn_dont_have_account"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/button_signIn_dont_have_account"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
         android:background="@color/Transparent"
         android:text="@string/button_dont_have_account"
         android:textAllCaps="false"
         android:textColor="@color/Black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:textSize="18sp" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

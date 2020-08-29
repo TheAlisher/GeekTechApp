@@ -49,7 +49,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void createViewPager(View view) {
-        viewPager = view.findViewById(R.id.view_pager_events);
+        viewPager = view.findViewById(R.id.viewPager_home);
         viewPager.setAdapter(new HomePagerAdapter(getChildFragmentManager()));
         viewPager.setCurrentItem(1);
         viewPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
@@ -57,15 +57,13 @@ public class HomeFragment extends Fragment {
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 switch (position) {
                     case 0:
-                        MainActivity.fab.show();
                         MainActivity.fab.setImageResource(R.drawable.icon_add);
                         break;
                     case 1:
-                        MainActivity.fab.show();
                         MainActivity.fab.setImageResource(R.drawable.icon_qr_code_scanner);
                         break;
                     case 2:
-                        MainActivity.fab.hide();
+                        MainActivity.fab.setImageResource(R.drawable.icon_speaker_notes);
                         break;
                 }
                 pagerCurrentItem = position;

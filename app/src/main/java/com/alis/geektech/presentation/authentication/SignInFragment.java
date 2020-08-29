@@ -1,29 +1,24 @@
-package com.alis.geektech.presentation.auth;
+package com.alis.geektech.presentation.authentication;
 
-import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.alis.geektech.R;
 import com.alis.geektech.presentation.fragments.home.HomeFragment;
 
 public class SignInFragment extends Fragment {
 
-    public static void start(Activity activity, int action) {
-        Navigation
-                .findNavController(activity, R.id.nav_host_fragment)
-                .navigate(action);
-    }
-
+    private EditText editUsername;
+    private EditText editPassword;
     private Button buttonSingIn;
     private Button buttonDontHaveAccount;
 
@@ -41,6 +36,7 @@ public class SignInFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         initializationViews(view);
+
         buttonSingIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,15 +52,17 @@ public class SignInFragment extends Fragment {
     }
 
     private void initializationViews(View view) {
+        editUsername = view.findViewById(R.id.edit_signIn_username);
+        editPassword = view.findViewById(R.id.edit_signIn_password);
         buttonSingIn = view.findViewById(R.id.button_signIn);
         buttonDontHaveAccount = view.findViewById(R.id.button_signIn_dont_have_account);
     }
 
     private void clickSignIn() {
-        HomeFragment.start(requireActivity(), R.id.action_signInFragment_to_navigation_home);
+        HomeFragment.start(requireActivity(), R.id.action_authenticationFragment_to_navigation_home);
     }
 
     private void clickDontHaveAccount() {
-        SignUpFragment.start(requireActivity(), R.id.action_signInFragment_to_signUpFragment);
+        AuthenticationFragment.viewPager.setCurrentItem(1);
     }
 }

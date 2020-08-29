@@ -5,7 +5,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.alis.geektech.R;
-import com.alis.geektech.presentation.auth.SignInFragment;
+import com.alis.geektech.presentation.authentication.AuthenticationFragment;
+import com.alis.geektech.presentation.authentication.SignInFragment;
 import com.alis.geektech.presentation.fragments.home.HomeFragment;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -54,7 +54,7 @@ public class SendARequestFragment extends Fragment {
 
     private void clickSend() {
         if (FirebaseAuth.getInstance().getCurrentUser() == null) {
-            SignInFragment.start(requireActivity(), R.id.action_sendARequestFragment_to_signInFragment);
+            AuthenticationFragment.start(requireActivity(), R.id.action_sendARequestFragment_to_authenticationFragment);
         } else {
             HomeFragment.start(requireActivity(), R.id.action_sendARequestFragment_to_navigation_home);
         }

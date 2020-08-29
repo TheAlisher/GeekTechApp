@@ -10,12 +10,14 @@ import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.alis.geektech.App;
 import com.alis.geektech.R;
 import com.alis.geektech.presentation.fragments.home.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,14 +30,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        isIntroOrAuth();
+        isIntroOrAuthentication();
 
         setNavControllerWithBottomNav();
         createFAB();
         listenerNavController();
     }
 
-    private void isIntroOrAuth() {
+    private void isIntroOrAuthentication() {
         if (App.appPreferences.isFirstLaunch()) {
             Navigation
                     .findNavController(this, R.id.nav_host_fragment)
@@ -43,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (FirebaseAuth.getInstance().getCurrentUser() == null) {
             Navigation
                     .findNavController(this, R.id.nav_host_fragment)
-                    .navigate(R.id.signUpFragment);
+                    .navigate(R.id.authenticationFragment);
         }
     }
 
@@ -52,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
     }
+
+    private boolean WWEorGTM = true;
 
     private void createFAB() {
         fab = findViewById(R.id.fab);
@@ -64,7 +68,29 @@ public class MainActivity extends AppCompatActivity {
                 if (HomeFragment.pagerCurrentItem == 1) {
                     navController.navigate(R.id.QRScannerFragment);
                 }
+                if (HomeFragment.pagerCurrentItem == 2) {
+                    if (WWEorGTM) {
+                        Snackbar.make(view, "Кто будет кушать?", Snackbar.LENGTH_SHORT)
+                                .setAction("Отправить", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Toast.makeText(getBaseContext(), "Отправить всем кто в офисе уведомление КТО БУДЕТ КУШАТЬ?", Toast.LENGTH_SHORT).show();
 
+                                    }
+                                })
+                                .show();
+                    } else {
+                        Snackbar.make(view, "Я в магазин", Snackbar.LENGTH_SHORT)
+                                .setAction("Отправить", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Toast.makeText(getBaseContext(), "Отправить всем кто в офисе уведомление Я В МАГАЗИН", Toast.LENGTH_SHORT).show();
+                                    }
+                                })
+                                .show();
+                    }
+                    WWEorGTM = !WWEorGTM;
+                }
             }
         });
     }
@@ -86,8 +112,7 @@ public class MainActivity extends AppCompatActivity {
                         fabHide();
                         break;
                     case R.id.introFragment:
-                    case R.id.signUpFragment:
-                    case R.id.signInFragment:
+                    case R.id.authenticationFragment:
                     case R.id.QRScannerFragment:
                     case R.id.addProblemFragment:
                         fabHide();

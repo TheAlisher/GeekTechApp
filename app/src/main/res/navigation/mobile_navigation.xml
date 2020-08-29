@@ -71,40 +71,34 @@
         android:label="fragment_send_a_request"
         tools:layout="@layout/fragment_send_a_request" >
         <action
-            android:id="@+id/action_sendARequestFragment_to_signInFragment"
-            app:destination="@id/signInFragment" />
-        <action
             android:id="@+id/action_sendARequestFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_sendARequestFragment_to_authenticationFragment"
+            app:destination="@id/authenticationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/authenticationFragment"
+        android:name="com.alis.geektech.presentation.authentication.AuthenticationFragment"
+        android:label="fragment_authentication"
+        tools:layout="@layout/fragment_authentication" >
+        <action
+            android:id="@+id/action_authenticationFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
     </fragment>
 
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.alis.geektech.presentation.auth.SignInFragment"
+        android:name="com.alis.geektech.presentation.authentication.SignInFragment"
         android:label="fragment_sign_in"
-        tools:layout="@layout/fragment_sign_in">
-        <action
-            android:id="@+id/action_signInFragment_to_signUpFragment"
-            app:destination="@id/signUpFragment"
-            app:launchSingleTop="false" />
-        <action
-            android:id="@+id/action_signInFragment_to_navigation_home"
-            app:destination="@id/navigation_home" />
-    </fragment>
+        tools:layout="@layout/fragment_sign_in"/>
 
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.alis.geektech.presentation.auth.SignUpFragment"
+        android:name="com.alis.geektech.presentation.authentication.SignUpFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up">
-        <action
-            android:id="@+id/action_signUpFragment_to_signInFragment"
-            app:destination="@id/signInFragment"
-            app:launchSingleTop="false" />
-        <action
-            android:id="@+id/action_signUpFragment_to_navigation_home"
-            app:destination="@id/navigation_home" />
-    </fragment>
+        tools:layout="@layout/fragment_sign_up"/>
 
 
 </navigation>
