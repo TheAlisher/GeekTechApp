@@ -1,7 +1,6 @@
 package com.alis.geektech.presentation.fragments.home;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -31,6 +30,7 @@ public class HomeFragment extends Fragment {
     }
 
     private ViewPager viewPager;
+    public static int pagerCurrentItem;
 
     public HomeFragment() {
     }
@@ -68,6 +68,7 @@ public class HomeFragment extends Fragment {
                         MainActivity.fab.hide();
                         break;
                 }
+                pagerCurrentItem = position;
             }
         });
     }

@@ -9,7 +9,8 @@
         android:id="@+id/navigation_home"
         android:name="com.alis.geektech.presentation.fragments.home.HomeFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_profile"
@@ -28,6 +29,12 @@
         android:name="com.alis.geektech.presentation.fragments.home.help.HelpFragment"
         android:label="fragment_help"
         tools:layout="@layout/fragment_help" />
+
+    <fragment
+        android:id="@+id/addProblemFragment"
+        android:name="com.alis.geektech.presentation.fragments.home.help.addproblem.AddProblemFragment"
+        android:label="fragment_add_problem"
+        tools:layout="@layout/fragment_add_problem" />
 
     <fragment
         android:id="@+id/eventsFragment"
