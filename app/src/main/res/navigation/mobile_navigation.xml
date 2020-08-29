@@ -19,15 +19,15 @@
 
     <fragment
         android:id="@+id/QRScannerFragment"
-        android:name="com.alis.geektech.presentation.fragments.home.qrscanner.QRScannerFragment"
+        android:name="com.alis.geektech.presentation.fragments.qrscanner.QRScannerFragment"
         android:label="fragment_qr_scanner"
         tools:layout="@layout/fragment_qr_scanner" />
 
     <fragment
-        android:id="@+id/inOfficeFragment"
-        android:name="com.alis.geektech.presentation.fragments.home.inoffice.InOfficeFragment"
-        android:label="fragment_in_office"
-        tools:layout="@layout/fragment_in_office" />
+        android:id="@+id/helpFragment"
+        android:name="com.alis.geektech.presentation.fragments.home.help.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
 
     <fragment
         android:id="@+id/eventsFragment"
@@ -36,13 +36,39 @@
         tools:layout="@layout/fragment_events" />
 
     <fragment
+        android:id="@+id/inOfficeFragment"
+        android:name="com.alis.geektech.presentation.fragments.home.inoffice.InOfficeFragment"
+        android:label="fragment_in_office"
+        tools:layout="@layout/fragment_in_office" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.alis.geektech.presentation.fragments.home.inoffice.chat.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+
+    <fragment
         android:id="@+id/introFragment"
         android:name="com.alis.geektech.presentation.onboard.IntroFragment"
         android:label="fragment_intro"
         tools:layout="@layout/fragment_intro" >
         <action
-            android:id="@+id/action_introFragment_to_signInFragment"
+            android:id="@+id/action_introFragment_to_sendARequestFragment"
+            app:destination="@id/sendARequestFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sendARequestFragment"
+        android:name="com.alis.geektech.presentation.fragments.sendarequest.SendARequestFragment"
+        android:label="fragment_send_a_request"
+        tools:layout="@layout/fragment_send_a_request" >
+        <action
+            android:id="@+id/action_sendARequestFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_sendARequestFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
 
     <fragment
@@ -54,6 +80,9 @@
             android:id="@+id/action_signInFragment_to_signUpFragment"
             app:destination="@id/signUpFragment"
             app:launchSingleTop="false" />
+        <action
+            android:id="@+id/action_signInFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
 
     <fragment
@@ -65,8 +94,10 @@
             android:id="@+id/action_signUpFragment_to_signInFragment"
             app:destination="@id/signInFragment"
             app:launchSingleTop="false" />
+        <action
+            android:id="@+id/action_signUpFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
-
 
 
 </navigation>

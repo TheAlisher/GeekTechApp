@@ -1,4 +1,4 @@
-package com.alis.geektech.presentation.fragments.home.qrscanner;
+package com.alis.geektech.presentation.fragments.home.inoffice.chat;
 
 import android.os.Bundle;
 
@@ -12,15 +12,15 @@ import android.view.ViewGroup;
 
 import com.alis.geektech.R;
 
-public class QRScannerFragment extends Fragment {
+public class ChatFragment extends Fragment {
 
-    public QRScannerFragment() {
+    public ChatFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_qr_scanner, container, false);
+        return inflater.inflate(R.layout.fragment_chat, container, false);
     }
 
     @Override

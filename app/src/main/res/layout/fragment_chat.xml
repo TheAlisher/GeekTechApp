@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.fragments.qrscanner.QRScannerFragment">
+    tools:context=".presentation.fragments.home.inoffice.chat.ChatFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="QR Scanner Fragment"
-        android:textSize="40sp" />
+        android:text="ChatFragment"
+        android:textSize="30sp"
+        android:gravity="center"/>
 
 
 </LinearLayout>
