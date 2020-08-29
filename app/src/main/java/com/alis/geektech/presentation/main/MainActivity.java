@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (HomeFragment.pagerCurrentItem == 2) {
                     if (WWEorGTM) {
-                        Snackbar.make(view, "Кто будет кушать?", Snackbar.LENGTH_SHORT)
+                        Snackbar.make(view, "Кто будет кушать?", Snackbar.LENGTH_LONG)
                                 .setAction("Отправить", new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                                 })
                                 .show();
                     } else {
-                        Snackbar.make(view, "Я в магазин", Snackbar.LENGTH_SHORT)
+                        Snackbar.make(view, "Я в магазин", Snackbar.LENGTH_LONG)
                                 .setAction("Отправить", new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
