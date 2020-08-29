@@ -1,29 +1,26 @@
-package com.alis.geektech.presentation.auth;
+package com.alis.geektech.presentation.authentication;
 
-import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.alis.geektech.R;
 import com.alis.geektech.presentation.fragments.home.HomeFragment;
 
 public class SignUpFragment extends Fragment {
 
-    public static void start(Activity activity, int action) {
-        Navigation
-                .findNavController(activity, R.id.nav_host_fragment)
-                .navigate(action);
-    }
-
+    private EditText editName;
+    private EditText editEmail;
+    private EditText editPhoneNumber;
+    private EditText editPassword;
     private Button buttonSignUp;
     private Button buttonAlreadyHaveAccount;
 
@@ -57,15 +54,19 @@ public class SignUpFragment extends Fragment {
     }
 
     private void initializationViews(View view) {
+        editName =view.findViewById(R.id.edit_signUp_name);
+        editEmail = view.findViewById(R.id.edit_signUp_email);
+        editPassword = view.findViewById(R.id.edit_signUp_password);
+        editPhoneNumber = view.findViewById(R.id.edit_signUp_phone_number);
         buttonSignUp = view.findViewById(R.id.button_signUp);
         buttonAlreadyHaveAccount = view.findViewById(R.id.button_signUp_already_have_account);
     }
 
     private void clickSignUp() {
-        HomeFragment.start(requireActivity(), R.id.action_signUpFragment_to_navigation_home);
+        HomeFragment.start(requireActivity(), R.id.action_authenticationFragment_to_navigation_home);
     }
 
     private void clickAlreadyHaveAccount() {
-        SignInFragment.start(requireActivity(), R.id.action_signUpFragment_to_signInFragment);
+        AuthenticationFragment.viewPager.setCurrentItem(0);
     }
 }
