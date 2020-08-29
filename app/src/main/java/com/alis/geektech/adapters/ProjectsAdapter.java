@@ -1,4 +1,4 @@
-package com.alis.geektech;
+package com.alis.geektech.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,15 +9,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.alis.geektech.R;
 import com.alis.geektech.models.Project;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.ProjectsViewHolder> {
 
-    private List<Project> list;
+    private ArrayList<Project> list;
 
-    public ProjectsAdapter(List<Project> list) {
+    public ProjectsAdapter(ArrayList<Project> list) {
         this.list = list;
         Project project1 = new Project(
                 R.mipmap.ic_launcher_round,
