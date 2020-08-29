@@ -11,9 +11,11 @@ import androidx.navigation.ui.NavigationUI;
 import android.os.Bundle;
 import android.view.View;
 
+import com.alis.geektech.App;
 import com.alis.geektech.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,10 +27,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        isIntroOrAuth();
 
         setNavControllerWithBottomNav();
         createFAB();
         listenerNavController();
+    }
+
+    private void isIntroOrAuth() {
+        if (App.appPreferences.isFirstLaunch()) {
+            Navigation
+                    .findNavController(this, R.id.nav_host_fragment)
+                    .navigate(R.id.introFragment);
+        } else if (FirebaseAuth.getInstance().getCurrentUser() == null) {
+            Navigation
+                    .findNavController(this, R.id.nav_host_fragment)
+                    .navigate(R.id.signUpFragment);
+        }
     }
 
     private void setNavControllerWithBottomNav() {
@@ -60,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
                         fab.setVisibility(View.VISIBLE);
                         break;
                     case R.id.QRScannerFragment:
+                    case R.id.introFragment:
+                    case R.id.signUpFragment:
+                    case R.id.signInFragment:
                         bottomNavigationView.setVisibility(View.GONE);
                         fab.setVisibility(View.GONE);
                         break;
