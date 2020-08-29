@@ -8,6 +8,15 @@
 
     <!--ProfileFragment-->
     <string name="contentDescription_image_user_photo">Image user photo</string>
+    
+    <!--IntroFragment-->
+    <string name="button_send_a_request">Отправить заявку</string>
 
+    <!--SignUpFragment / SignInFragment-->
+    <string name="button_sign_up">Зарегистрироваться</string>
+    <string name="button_already_have_account">Уже есть акккаунт? Войти</string>
+    <string name="button_sign_in">Войти</string>
+    <string name="button_dont_have_account">Нет аккаунта? Зарегистрироваться</string>
+    
 
 </resources>

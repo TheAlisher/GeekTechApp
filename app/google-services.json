@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "321721185794",
+    "firebase_url": "https://geektechapp-a2bc0.firebaseio.com",
+    "project_id": "geektechapp-a2bc0",
+    "storage_bucket": "geektechapp-a2bc0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321721185794:android:841022d9e11ad9352ad91b",
+        "android_client_info": {
+          "package_name": "com.alis.geektech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "321721185794-h95cd35tkjhphtmd1v837vgedhphtpbb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3uwzVVf6ei6UQlu-8dZVIOKzEqauTw1g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "321721185794-h95cd35tkjhphtmd1v837vgedhphtpbb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
