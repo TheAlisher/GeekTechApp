@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".presentation.fragments.sendarequest.SendARequestFragment">
+
+    <EditText
+        android:id="@+id/edit_sendARequest_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/hint_name"
+        android:hint="@string/hint_name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edit_sendARequest_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/hint_phone_number"
+        android:hint="@string/hint_phone_number"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/button_sendARequest_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:text="@string/button_send" />
+
+
+</LinearLayout>

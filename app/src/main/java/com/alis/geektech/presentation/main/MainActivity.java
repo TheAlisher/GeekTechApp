@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
     private NavController navController;
-    private FloatingActionButton fab;
+    public static FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,21 +68,35 @@ public class MainActivity extends AppCompatActivity {
             public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
                 switch (destination.getId()) {
                     case R.id.navigation_home:
-                    case R.id.navigation_profile:
                     case R.id.inOfficeFragment:
                     case R.id.eventsFragment:
-                        bottomNavigationView.setVisibility(View.VISIBLE);
-                        fab.setVisibility(View.VISIBLE);
+                        fabShow();
+                        bottomNavigationGONE();
+                        fab.setImageResource(R.drawable.icon_qr_code_scanner);
+                        break;
+                    case R.id.navigation_profile:
+                    case R.id.chatFragment:
+                        fabHide();
                         break;
                     case R.id.QRScannerFragment:
                     case R.id.introFragment:
                     case R.id.signUpFragment:
                     case R.id.signInFragment:
-                        bottomNavigationView.setVisibility(View.GONE);
-                        fab.setVisibility(View.GONE);
+                        fabHide();
+                        bottomNavigationGONE();
                         break;
                 }
             }
         });
+    }
+
+    private void bottomNavigationGONE() {
+        bottomNavigationView.setVisibility(View.VISIBLE);
+    }
+    private void fabShow() {
+        fab.show();
+    }
+    private void fabHide() {
+        fab.hide();
     }
 }

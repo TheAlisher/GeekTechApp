@@ -14,10 +14,10 @@
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/button_intro_send_a_request"
+        android:id="@+id/button_intro_apply"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="@string/button_send_a_request"
+        android:text="@string/button_apply"
         android:textColor="@color/Black"
         android:layout_marginBottom="20dp"
         android:textSize="20sp"

@@ -17,7 +17,7 @@ import com.alis.geektech.R;
 
 public class IntroFragment extends Fragment {
 
-    private Button buttonSendARequest;
+    private Button buttonApply;
 
     public IntroFragment() {
     }
@@ -33,22 +33,22 @@ public class IntroFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         initializationViews(view);
-        buttonSendARequest.setOnClickListener(new View.OnClickListener() {
+        buttonApply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                clickSendARequest();
+                clickApply();
             }
         });
     }
 
     private void initializationViews(View view) {
-        buttonSendARequest = view.findViewById(R.id.button_intro_send_a_request);
+        buttonApply = view.findViewById(R.id.button_intro_apply);
     }
 
-    private void clickSendARequest() {
+    private void clickApply() {
         Navigation
                 .findNavController(requireActivity(), R.id.nav_host_fragment)
-                .navigate(R.id.action_introFragment_to_signInFragment);
+                .navigate(R.id.action_introFragment_to_sendARequestFragment);
         App.appPreferences.setLaunched();
     }
 }

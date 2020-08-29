@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.alis.geektech.R;
+import com.alis.geektech.presentation.fragments.home.HomeFragment;
 
 public class SignInFragment extends Fragment {
 
@@ -60,7 +61,7 @@ public class SignInFragment extends Fragment {
     }
 
     private void clickSignIn() {
-
+        HomeFragment.start(requireActivity(), R.id.action_signInFragment_to_navigation_home);
     }
 
     private void clickDontHaveAccount() {
