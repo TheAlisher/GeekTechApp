@@ -32,7 +32,7 @@ public class AuthenticationFragment extends Fragment {
     }
 
     private TabLayout tabLayout;
-    public static ViewPager viewPager;
+    private ViewPager viewPager;
 
     public AuthenticationFragment() {
     }

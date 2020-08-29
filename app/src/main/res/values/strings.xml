@@ -32,18 +32,19 @@
     <string name="hint_phone_number">Номер телефона</string>
     <string name="button_send">Отправить</string>
 
-    <!--SignUpFragment /-->
+    <!--SignInFragment-->
+    <string name="hint_enter_email_or_phone_number">Введите Email или Номер телефона</string>
+    <string name="hint_enter_password">Введите Пароль</string>
+    <string name="button_sign_in">Войти</string>
+    <string name="button_sign_in_with">Войти с помощью</string>
+    <string name="button_dont_have_account">Нет аккаунта? Зарегистрироваться</string>
+
+    <!--SignUpFragment -->
     <string name="hint_email">Email</string>
     <string name="text_or">Или</string>
     <string name="hint_password">Пароль</string>
     <string name="button_sign_up">Зарегистрироваться</string>
     <string name="button_already_have_account">Уже есть акккаунт? Войти</string>
-
-    <!--SignInFragment-->
-    <string name="hint_enter_email_or_phone_number">Введите Email или Номер телефона</string>
-    <string name="hint_enter_password">Введите Пароль</string>
-    <string name="button_sign_in">Войти</string>
-    <string name="button_dont_have_account">Нет аккаунта? Зарегистрироваться</string>
 
 
 </resources>

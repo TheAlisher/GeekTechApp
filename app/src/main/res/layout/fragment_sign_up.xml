@@ -60,16 +60,5 @@
         android:text="@string/button_sign_up"
         android:textSize="15sp" />
 
-    <Button
-        android:id="@+id/button_signUp_already_have_account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@color/Transparent"
-        android:text="@string/button_already_have_account"
-        android:textAllCaps="false"
-        android:textColor="@color/Black"
-        android:textSize="18sp" />
-
 
 </LinearLayout>
