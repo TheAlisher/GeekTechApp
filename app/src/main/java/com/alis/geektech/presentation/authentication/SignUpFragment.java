@@ -22,7 +22,6 @@ public class SignUpFragment extends Fragment {
     private EditText editPhoneNumber;
     private EditText editPassword;
     private Button buttonSignUp;
-    private Button buttonAlreadyHaveAccount;
 
     public SignUpFragment() {
     }
@@ -45,28 +44,17 @@ public class SignUpFragment extends Fragment {
                 clickSignUp();
             }
         });
-        buttonAlreadyHaveAccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                clickAlreadyHaveAccount();
-            }
-        });
     }
 
     private void initializationViews(View view) {
-        editName =view.findViewById(R.id.edit_signUp_name);
+        editName = view.findViewById(R.id.edit_signUp_name);
         editEmail = view.findViewById(R.id.edit_signUp_email);
         editPassword = view.findViewById(R.id.edit_signUp_password);
         editPhoneNumber = view.findViewById(R.id.edit_signUp_phone_number);
         buttonSignUp = view.findViewById(R.id.button_signUp);
-        buttonAlreadyHaveAccount = view.findViewById(R.id.button_signUp_already_have_account);
     }
 
     private void clickSignUp() {
         HomeFragment.start(requireActivity(), R.id.action_authenticationFragment_to_navigation_home);
-    }
-
-    private void clickAlreadyHaveAccount() {
-        AuthenticationFragment.viewPager.setCurrentItem(0);
     }
 }

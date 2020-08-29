@@ -110,13 +110,14 @@ public class MainActivity extends AppCompatActivity {
                         fab.setImageResource(R.drawable.icon_qr_code_scanner);
                         break;
                     case R.id.navigation_profile:
-                    case R.id.chatFragment:
                         fabHide();
                         break;
                     case R.id.introFragment:
                     case R.id.authenticationFragment:
                     case R.id.QRScannerFragment:
                     case R.id.addProblemFragment:
+                    case R.id.chatFragment:
+                    case R.id.editProfileFragment:
                         fabHide();
                         bottomNavigationGONE();
                         break;

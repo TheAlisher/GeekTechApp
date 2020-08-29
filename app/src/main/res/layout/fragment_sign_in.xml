@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -35,16 +36,20 @@
         android:text="@string/button_sign_in"
         android:textSize="15sp" />
 
-    <Button
-        android:id="@+id/button_signIn_dont_have_account"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_signIn_with"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_margin="20dp"
         android:background="@color/Transparent"
-        android:text="@string/button_dont_have_account"
+        android:drawableEnd="@drawable/icon_google"
+        android:drawablePadding="40dp"
+        android:text="@string/button_sign_in_with"
         android:textAllCaps="false"
         android:textColor="@color/Black"
-        android:textSize="18sp" />
+        android:textSize="16sp"
+        app:strokeColor="@color/Black"
+        app:strokeWidth="1dp" />
 
 
 </LinearLayout>
