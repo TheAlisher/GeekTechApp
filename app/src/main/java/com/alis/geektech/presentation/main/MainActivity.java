@@ -13,6 +13,7 @@ import android.view.View;
 
 import com.alis.geektech.App;
 import com.alis.geektech.R;
+import com.alis.geektech.presentation.fragments.home.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
@@ -57,7 +58,13 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navController.navigate(R.id.QRScannerFragment);
+                if (HomeFragment.pagerCurrentItem == 0) {
+                    navController.navigate(R.id.addProblemFragment);
+                }
+                if (HomeFragment.pagerCurrentItem == 1) {
+                    navController.navigate(R.id.QRScannerFragment);
+                }
+
             }
         });
     }
@@ -71,17 +78,18 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.inOfficeFragment:
                     case R.id.eventsFragment:
                         fabShow();
-                        bottomNavigationGONE();
+                        bottomNavigationVISIBLE();
                         fab.setImageResource(R.drawable.icon_qr_code_scanner);
                         break;
                     case R.id.navigation_profile:
                     case R.id.chatFragment:
                         fabHide();
                         break;
-                    case R.id.QRScannerFragment:
                     case R.id.introFragment:
                     case R.id.signUpFragment:
                     case R.id.signInFragment:
+                    case R.id.QRScannerFragment:
+                    case R.id.addProblemFragment:
                         fabHide();
                         bottomNavigationGONE();
                         break;
@@ -90,12 +98,18 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void bottomNavigationGONE() {
+    private void bottomNavigationVISIBLE() {
         bottomNavigationView.setVisibility(View.VISIBLE);
     }
+
+    private void bottomNavigationGONE() {
+        bottomNavigationView.setVisibility(View.GONE);
+    }
+
     private void fabShow() {
         fab.show();
     }
+
     private void fabHide() {
         fab.hide();
     }
