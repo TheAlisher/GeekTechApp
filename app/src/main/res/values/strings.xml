@@ -37,6 +37,9 @@
     <string name="contentDescription_icon_add_a_photo">Icon add a photo</string>
     <string name="button_save">Сохранить</string>
 
+    <!--list_projects_item-->
+    <string name="contentDescription_icon_project">Icon project</string>
+
     <!--IntroFragment-->
     <string name="button_apply">Подать заявку</string>
 

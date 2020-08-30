@@ -1,5 +1,7 @@
 package com.alis.geektech.adapters;
 
+import android.graphics.Color;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,14 +22,36 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.Projec
 
     public ProjectsAdapter(ArrayList<Project> list) {
         this.list = list;
+
+        addItem();
+    }
+
+    private void addItem() {
         Project project1 = new Project(
-                R.mipmap.ic_launcher_round,
+                R.drawable.icon_planner,
                 "Planner",
                 "AzamatGit",
                 "planner.market.com",
+                false,
+                false);
+        Project project2 = new Project(
+                R.drawable.icon_planner,
+                "Planner",
+                "https://github.com/Azamat753/YouTubeParcer",
+                "planner.market.com",
                 true,
                 false);
+        Project project3= new Project(
+                R.drawable.icon_planner,
+                "Planner",
+                "https://github.com/Azamat753/YouTubeParcer",
+                "https://play.google.com/store/apps/details?id=com.lawlett.taskmanageruikit",
+                true,
+                true);
+        list.clear();
         list.add(project1);
+        list.add(project2);
+        list.add(project3);
     }
 
     @NonNull
@@ -49,24 +73,39 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.Projec
 
     public static class ProjectsViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView tvNameApp, tvGit, tvPlayMarket;
+        private TextView textName;
+        private TextView textGitHub;
+        private TextView textPlayMarket;
         private ImageView imageLogo;
 
         public ProjectsViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvNameApp = itemView.findViewById(R.id.text_project_name_app);
-            tvGit = itemView.findViewById(R.id.text_project_git);
-            tvPlayMarket = itemView.findViewById(R.id.text_project_play_market);
+
+            initializationViews(itemView);
+            setHyperlink();
+        }
+
+        private void initializationViews(View itemView) {
+            textName = itemView.findViewById(R.id.text_project_name);
+            textGitHub = itemView.findViewById(R.id.text_project_github);
+            textPlayMarket = itemView.findViewById(R.id.text_project_play_market);
             imageLogo = itemView.findViewById(R.id.row_image);
         }
 
+        private void setHyperlink() {
+            textGitHub.setMovementMethod(LinkMovementMethod.getInstance());
+            textPlayMarket.setMovementMethod(LinkMovementMethod.getInstance());
+            textGitHub.setLinkTextColor(Color.BLUE);
+            textPlayMarket.setLinkTextColor(Color.BLUE);
+        }
+
         public void onBind(Project project) {
-            tvNameApp.setText(project.getProjectName());
+            textName.setText(project.getProjectName());
             if (project.isProjectGit()){
-                tvGit.setText(project.getProjectGit());
+                textGitHub.setText(project.getProjectGit());
             }
             if (project.isProjectPlayMarket()){
-                tvPlayMarket.setText(project.getProjectPlayMarket());
+                textPlayMarket.setText(project.getProjectPlayMarket());
             }
             imageLogo.setImageResource(project.getProjectLogo());
         }
