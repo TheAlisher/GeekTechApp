@@ -26,6 +26,7 @@ import com.alis.geektech.R;
 import com.budiyev.android.codescanner.CodeScanner;
 import com.budiyev.android.codescanner.CodeScannerView;
 import com.budiyev.android.codescanner.DecodeCallback;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.zxing.Result;
 
 public class QRScannerFragment extends Fragment {
@@ -50,7 +51,7 @@ public class QRScannerFragment extends Fragment {
         createScanner(view);
     }
 
-    private void createScanner(View view) {
+    private void createScanner(final View view) {
         codeScannerView = view.findViewById(R.id.codeScannerView);
         codeScanner = new CodeScanner(requireContext(), codeScannerView);
         codeScanner.setDecodeCallback(new DecodeCallback() {
@@ -61,10 +62,10 @@ public class QRScannerFragment extends Fragment {
                     public void run() {
                         if (result.toString().equals("GeekTech")) {
                             if (App.appPreferences.inOfficeOrNot()) {
-                                Toast.makeText(getContext(), "В офисе", Toast.LENGTH_LONG).show();
+                                Snackbar.make(view, "В офисе", Snackbar.LENGTH_LONG).show();
                                 App.appPreferences.setInOffice(false);
                             } else {
-                                Toast.makeText(getContext(), "Не в офисе", Toast.LENGTH_LONG).show();
+                                Snackbar.make(view, "Не в офисе", Snackbar.LENGTH_LONG).show();
                                 App.appPreferences.setInOffice(true);
                             }
                         }

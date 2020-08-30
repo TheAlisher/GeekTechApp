@@ -24,10 +24,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginEnd="11dp"
             android:background="@color/White"
             android:elevation="10dp"
             app:iconifiedByDefault="false"
+            app:queryBackground="@color/White"
             app:queryHint="@string/hint_search_student" />
 
 
@@ -36,7 +37,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_inOffice"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:listitem="@layout/list_students_item" />
 
 
 </LinearLayout>

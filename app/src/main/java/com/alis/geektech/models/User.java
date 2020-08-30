@@ -9,22 +9,21 @@ public class User implements Serializable {
     private String userLevel;
     private String userGitHub;
     private String userPassword;
-    private String isTopMentor;
+    private boolean inOffice;
+    private boolean isTopMentor;
+
+    public User(String userPhoto, String userName, boolean inOffice, boolean isTopMentor) {
+        this.userPhoto = userPhoto;
+        this.userName = userName;
+        this.inOffice = inOffice;
+        this.isTopMentor = isTopMentor;
+    }
 
     public User(String userPhoto, String userName, String userLevel, String userGitHub) {
         this.userPhoto = userPhoto;
         this.userName = userName;
         this.userLevel = userLevel;
         this.userGitHub = userGitHub;
-    }
-
-    public User(String userPhoto, String userName, String userLevel, String userGitHub, String userPassword, String isTopMentor) {
-        this.userPhoto = userPhoto;
-        this.userName = userName;
-        this.userLevel = userLevel;
-        this.userGitHub = userGitHub;
-        this.userPassword = userPassword;
-        this.isTopMentor = isTopMentor;
     }
 
     public String getUserPhoto() {
@@ -67,11 +66,19 @@ public class User implements Serializable {
         this.userPassword = userPassword;
     }
 
-    public String getIsTopMentor() {
+    public boolean isInOffice() {
+        return inOffice;
+    }
+
+    public void setInOffice(boolean inOffice) {
+        this.inOffice = inOffice;
+    }
+
+    public boolean isTopMentor() {
         return isTopMentor;
     }
 
-    public void setIsTopMentor(String isTopMentor) {
-        this.isTopMentor = isTopMentor;
+    public void setTopMentor(boolean topMentor) {
+        isTopMentor = topMentor;
     }
 }
