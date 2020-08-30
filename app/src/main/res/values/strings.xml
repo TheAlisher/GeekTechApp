@@ -23,6 +23,19 @@
 
     <!--ProfileFragment-->
     <string name="contentDescription_image_user_photo">Image user photo</string>
+    <string name="contentDescription_image_name_tag">Image name tag</string>
+    <string name="hint_username">Имя</string>
+    <string name="contentDescription_image_level">Image level</string>
+    <string name="hint_level">Уровень</string>
+    <string name="contentDescription_image_github">Image GitHub</string>
+    <string name="hint_github">GitHub</string>
+    <string name="button_edit_profile">Редактировать</string>
+    <string name="button_logout">Выйти</string>
+    <string name="text_my_projects">Мои проекты:</string>
+
+    <!--EditProfileFragment-->
+    <string name="contentDescription_icon_add_a_photo">Icon add a photo</string>
+    <string name="button_save">Сохранить</string>
 
     <!--IntroFragment-->
     <string name="button_apply">Подать заявку</string>

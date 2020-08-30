@@ -11,6 +11,7 @@ import androidx.navigation.ui.NavigationUI;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.alis.geektech.App;
@@ -111,10 +112,11 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.navigation_profile:
                         fabHide();
+                        bottomNavigationVISIBLE();
                         break;
+                    case R.id.QRScannerFragment:
                     case R.id.introFragment:
                     case R.id.authenticationFragment:
-                    case R.id.QRScannerFragment:
                     case R.id.addProblemFragment:
                     case R.id.chatFragment:
                     case R.id.editProfileFragment:
