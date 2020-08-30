@@ -70,7 +70,7 @@ public class HelpFragment extends Fragment {
     }
 
     private void clickBack() {
-        HomeFragment.viewPager.setCurrentItem(1);
+        HomeFragment.viewPager.setCurrentItem(1, true);
     }
 
     private void clickAdapter(int position) {
