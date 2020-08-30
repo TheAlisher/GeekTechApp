@@ -9,8 +9,11 @@
 
     <!--HelpFragment-->
     <string name="text_geek_help">GeekHelp</string>
+    <string name="text_send">Отправить</string>
 
     <!--AddProblemFragment-->
+    <string name="hint_title_question_or_problem">Заглавие вопроса/проблемы</string>
+    <string name="hint_description_question_or_problem">Описание вопроса/проблемы</string>
 
     <!--EventsFragment-->
     <string name="text_geek_events">GeekEvents</string>
