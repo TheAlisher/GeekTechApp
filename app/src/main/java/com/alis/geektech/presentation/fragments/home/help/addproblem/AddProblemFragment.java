@@ -64,7 +64,7 @@ public class AddProblemFragment extends Fragment {
                 inputLayoutDescription.setError("Заполните поле");
             }
         } else  {
-            inputLayoutDescription.setErrorEnabled(false);
+            inputLayoutTitle.setErrorEnabled(false);
             inputLayoutDescription.setErrorEnabled(false);
             Navigation
                     .findNavController(requireActivity(), R.id.nav_host_fragment)
