@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardHelp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="18dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="20dp"
     app:cardUseCompatPadding="true">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:layout_margin="20dp"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/text_question"
+            android:id="@+id/text_help_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:textColor="#000"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:text="Question"
+            android:textColor="@color/Black"
             android:textSize="22sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/text_description"
+            android:id="@+id/text_help_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
-            android:textColor="@color/Black"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:text="Description"
-            android:textSize="18sp"
-            app:layout_constraintTop_toBottomOf="@id/text_question"
-            app:layout_constraintStart_toStartOf="parent"/>
+            android:textColor="@color/Black"
+            android:textSize="18sp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
 
 </androidx.cardview.widget.CardView>

@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.alis.geektech.R;
 import com.alis.geektech.models.Project;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 
 import java.util.ArrayList;
 
@@ -41,7 +43,7 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.Projec
                 "planner.market.com",
                 true,
                 false);
-        Project project3= new Project(
+        Project project3 = new Project(
                 R.drawable.icon_planner,
                 "Planner",
                 "https://github.com/Azamat753/YouTubeParcer",
@@ -100,14 +102,18 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.Projec
         }
 
         public void onBind(Project project) {
+            Glide
+                    .with(imageLogo.getContext())
+                    .load(project.getProjectLogo())
+                    .transform(new RoundedCorners(40))
+                    .into(imageLogo);
             textName.setText(project.getProjectName());
-            if (project.isProjectGit()){
+            if (project.isProjectGit()) {
                 textGitHub.setText(project.getProjectGit());
             }
-            if (project.isProjectPlayMarket()){
+            if (project.isProjectPlayMarket()) {
                 textPlayMarket.setText(project.getProjectPlayMarket());
             }
-            imageLogo.setImageResource(project.getProjectLogo());
         }
     }
 }

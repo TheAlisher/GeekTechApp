@@ -8,22 +8,27 @@
     <string name="title_profile">Профиль</string>
 
     <!--HelpFragment-->
+    <string name="text_geek_help">GeekHelp</string>
 
     <!--AddProblemFragment-->
 
     <!--EventsFragment-->
+    <string name="text_geek_events">GeekEvents</string>
+
+    <!--list_events_item-->
+    <string name="contentDescription_image_events">Image events</string>
 
     <!--QRScannerFragment-->
 
     <!--InOfficeFragment-->
-    <string name="button_who_will_eat">Кто будет кушать?</string>
-    <string name="button_going_to_market">Я в магазин</string>
+    <string name="hint_search_student">Поиск студента…</string>
 
     <!--ChatFragment-->
 
     <!--ProfileFragment-->
     <string name="contentDescription_image_user_photo">Image user photo</string>
     <string name="contentDescription_image_name_tag">Image name tag</string>
+    <string name="contentDescription_icon_verified">Icon verified</string>
     <string name="hint_username">Имя</string>
     <string name="contentDescription_image_level">Image level</string>
     <string name="hint_level">Уровень</string>
