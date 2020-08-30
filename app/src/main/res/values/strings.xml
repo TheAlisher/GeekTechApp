@@ -24,6 +24,7 @@
     <!--ProfileFragment-->
     <string name="contentDescription_image_user_photo">Image user photo</string>
     <string name="contentDescription_image_name_tag">Image name tag</string>
+    <string name="contentDescription_icon_verified">Icon verified</string>
     <string name="hint_username">Имя</string>
     <string name="contentDescription_image_level">Image level</string>
     <string name="hint_level">Уровень</string>

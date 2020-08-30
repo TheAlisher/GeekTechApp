@@ -34,6 +34,7 @@ public class ProfileFragment extends Fragment {
 
     private ImageView imageUserPhoto;
     private TextView textName;
+    private ImageView imageVerified;
     private EditText editLevel;
     private EditText editGitHub;
     private MaterialButton buttonEditProfile;
@@ -81,6 +82,7 @@ public class ProfileFragment extends Fragment {
     private void initializationViews(View view) {
         imageUserPhoto = view.findViewById(R.id.image_profile_user_photo);
         textName = view.findViewById(R.id.text_profile_name);
+        imageVerified = view.findViewById(R.id.image_profile_verified);
         editLevel = view.findViewById(R.id.edit_profile_level);
         editGitHub = view.findViewById(R.id.edit_profile_github);
         buttonEditProfile = view.findViewById(R.id.materialbutton_profile_edit);
