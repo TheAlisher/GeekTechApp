@@ -16,7 +16,6 @@
             android:layout_width="30dp"
             android:layout_height="match_parent"
             android:contentDescription="@null"
-            android:elevation="10dp"
             android:src="@drawable/icon_back" />
 
         <androidx.appcompat.widget.SearchView

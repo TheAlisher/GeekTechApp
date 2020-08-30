@@ -10,6 +10,15 @@
         android:name="com.alis.geektech.presentation.fragments.home.HomeFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_eventFragment"
+            app:destination="@id/eventFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_problemFragment"
+            app:destination="@id/problemFragment" />
     </fragment>
 
     <fragment
@@ -35,19 +44,38 @@
         android:id="@+id/helpFragment"
         android:name="com.alis.geektech.presentation.fragments.home.help.HelpFragment"
         android:label="fragment_help"
-        tools:layout="@layout/fragment_help" />
+        tools:layout="@layout/fragment_help" >
+        <action
+            android:id="@+id/action_helpFragment_to_problemFragment"
+            app:destination="@id/problemFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/problemFragment"
+        android:name="com.alis.geektech.presentation.fragments.home.help.problem.ProblemFragment"
+        android:label="fragment_problem"
+        tools:layout="@layout/fragment_problem" />
 
     <fragment
         android:id="@+id/addProblemFragment"
         android:name="com.alis.geektech.presentation.fragments.home.help.addproblem.AddProblemFragment"
         android:label="fragment_add_problem"
-        tools:layout="@layout/fragment_add_problem" />
+        tools:layout="@layout/fragment_add_problem" >
+        <action
+            android:id="@+id/action_addProblemFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
 
     <fragment
         android:id="@+id/eventsFragment"
         android:name="com.alis.geektech.presentation.fragments.home.events.EventsFragment"
         android:label="fragment_events"
         tools:layout="@layout/fragment_events" />
+    <fragment
+        android:id="@+id/eventFragment"
+        android:name="com.alis.geektech.presentation.fragments.home.events.event.EventFragment"
+        android:label="fragment_event"
+        tools:layout="@layout/fragment_event" />
 
     <fragment
         android:id="@+id/inOfficeFragment"
@@ -80,6 +108,9 @@
         <action
             android:id="@+id/action_introFragment_to_sendARequestFragment"
             app:destination="@id/sendARequestFragment" />
+        <action
+            android:id="@+id/action_introFragment_to_authenticationFragment"
+            app:destination="@id/authenticationFragment" />
     </fragment>
 
     <fragment

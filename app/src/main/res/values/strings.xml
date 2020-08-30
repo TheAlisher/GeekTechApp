@@ -7,6 +7,15 @@
     <string name="title_chat">Чат</string>
     <string name="title_profile">Профиль</string>
 
+    <!--IntroFragment-->
+    <string name="text_about_geektech">
+        О нас) Мы первая школа программирования с эффективным методом обучения. Обучаем разработке мобильных приложений Android &amp; IOS.
+        В свою очередь наши преподаватели научат Вас всему, что необходимо для начинающих разработчиков.
+        Преподавательский состав из действующих разработчиков, которые обучают реальным кейсам.
+        Мы добьемся того чтобы Вы освоили все)
+    </string>
+    <string name="button_skip">Пропустить</string>
+
     <!--HelpFragment-->
     <string name="text_geek_help">GeekHelp</string>
     <string name="text_send">Отправить</string>
@@ -14,12 +23,17 @@
     <!--AddProblemFragment-->
     <string name="hint_title_question_or_problem">Заглавие вопроса/проблемы</string>
     <string name="hint_description_question_or_problem">Описание вопроса/проблемы</string>
+    <string name="hint_from_whom">От кого</string>
+
+    <!--ProblemFragment-->
+    <string name="text_from">От:</string>
+    <string name="button_help">Помочь</string>
 
     <!--EventsFragment-->
     <string name="text_geek_events">GeekEvents</string>
 
     <!--list_events_item-->
-    <string name="contentDescription_image_events">Image events</string>
+    <string name="contentDescription_image_event">Image event</string>
 
     <!--QRScannerFragment-->
 
@@ -27,6 +41,7 @@
     <string name="hint_search_student">Поиск студента…</string>
 
     <!--ChatFragment-->
+    <string name="hint_send_message">Отправить сообщение…</string>
 
     <!--ProfileFragment-->
     <string name="contentDescription_image_user_photo">Image user photo</string>
@@ -52,6 +67,7 @@
     <string name="button_apply">Подать заявку</string>
 
     <!--SendARequestFragment-->
+    <string name="contentDescription_icon_app">Icon GeekTech</string>
     <string name="hint_name">Имя</string>
     <string name="hint_phone_number">Номер телефона</string>
     <string name="button_send">Отправить</string>

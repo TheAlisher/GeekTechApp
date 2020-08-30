@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.navigation_home:
                     case R.id.inOfficeFragment:
                     case R.id.eventsFragment:
+                    case R.id.helpFragment:
                         fabShow();
                         bottomNavigationVISIBLE();
                         fab.setImageResource(R.drawable.icon_qr_code_scanner);
@@ -120,6 +121,8 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.addProblemFragment:
                     case R.id.chatFragment:
                     case R.id.editProfileFragment:
+                    case R.id.eventFragment:
+                    case R.id.problemFragment:
                         fabHide();
                         bottomNavigationGONE();
                         break;

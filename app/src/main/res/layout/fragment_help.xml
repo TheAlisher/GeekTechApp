@@ -47,7 +47,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_help"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:background="@color/White"
+        tools:listitem="@layout/list_help_item"
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>

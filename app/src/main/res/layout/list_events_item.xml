@@ -20,7 +20,7 @@
             android:id="@+id/image_events_photo"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:contentDescription="@string/contentDescription_image_events"
+            android:contentDescription="@string/contentDescription_image_event"
             android:scaleType="centerCrop" />
 
         <TextView
