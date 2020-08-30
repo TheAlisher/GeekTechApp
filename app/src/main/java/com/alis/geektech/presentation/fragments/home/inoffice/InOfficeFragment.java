@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,6 +22,7 @@ import com.alis.geektech.adapters.StudentsAdapter;
 import com.alis.geektech.interfaces.OnItemClickListener;
 import com.alis.geektech.models.User;
 import com.alis.geektech.presentation.fragments.home.HomeFragment;
+import com.alis.geektech.presentation.fragments.home.inoffice.chat.ChatFragment;
 
 import java.util.ArrayList;
 
@@ -57,7 +59,7 @@ public class InOfficeFragment extends Fragment {
         adapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                clickAdapter();
+                clickAdapter(position);
             }
         });
     }
@@ -78,7 +80,11 @@ public class InOfficeFragment extends Fragment {
         HomeFragment.viewPager.setCurrentItem(1, true);
     }
 
-    private void clickAdapter() {
-
+    private void clickAdapter(int position) {
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(ChatFragment.ARG_CHAT_DATA, list.get(position));
+        Navigation
+                .findNavController(requireActivity(), R.id.nav_host_fragment)
+                .navigate(R.id.action_navigation_home_to_chatFragment, bundle);
     }
 }

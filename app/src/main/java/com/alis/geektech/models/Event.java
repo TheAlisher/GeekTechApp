@@ -1,6 +1,8 @@
 package com.alis.geektech.models;
 
-public class Events {
+import java.io.Serializable;
+
+public class Event implements Serializable {
 
     private int eventPhoto;
     private String eventName;
@@ -8,7 +10,7 @@ public class Events {
     private String eventData;
     private String eventTime;
 
-    public Events(int eventPhoto, String eventName, String eventDescription, String eventData, String eventTime) {
+    public Event(int eventPhoto, String eventName, String eventDescription, String eventData, String eventTime) {
         this.eventPhoto = eventPhoto;
         this.eventName = eventName;
         this.eventDescription = eventDescription;

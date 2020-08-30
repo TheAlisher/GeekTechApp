@@ -29,15 +29,18 @@ public class HelpAdapter extends RecyclerView.Adapter<HelpAdapter.HelpViewHolder
     private void addItem() {
         Help help1 = new Help(
                 "У меня проблемы BottomNav",
-                "Я хочу сделать чтобы при скролле"
+                "Я хочу сделать чтобы при скролле",
+                "Айдин"
         );
         Help help2 = new Help(
                 "Почему данные в recycler не отображаются",
-                "Данные приходят но не отображаются в recyclerView"
+                "Данные приходят но не отображаются в recyclerView",
+                "Медер"
         );
         Help help3 = new Help(
                 "Не показывает fragment с navigation",
-                "Подключил navigation но fragment подсвечивается черным и не работает"
+                "Подключил navigation но fragment подсвечивается черным и не работает",
+                "Алтынбек"
         );
         list.clear();
         list.add(help1);

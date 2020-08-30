@@ -12,37 +12,37 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.alis.geektech.R;
 import com.alis.geektech.interfaces.OnItemClickListener;
-import com.alis.geektech.models.Events;
+import com.alis.geektech.models.Event;
 
 import java.util.ArrayList;
 
 public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.EventsViewHolder> {
 
-    private ArrayList<Events> list;
+    private ArrayList<Event> list;
     private OnItemClickListener onItemClickListener;
 
-    public EventsAdapter(ArrayList<Events> list) {
+    public EventsAdapter(ArrayList<Event> list) {
         this.list = list;
 
         addItem();
     }
 
     private void addItem() {
-        Events event1 = new Events(
+        Event event1 = new Event(
                 R.drawable.background_profile,
                 "Мастер класс",
                 "Будем проводить мастер класс и бла бла бла",
                 "23.08.20",
                 "17:00"
         );
-        Events event2 = new Events(
+        Event event2 = new Event(
                 R.drawable.background_profile,
                 "Митап",
                 "Будем проводить митап с ведущим программистам и т д",
                 "01.09.20",
                 "18:00"
         );
-        Events event3 = new Events(
+        Event event3 = new Event(
                 R.drawable.background_profile,
                 "Играем в мафию приходите все студенты ГикТека",
                 "Будем играть в мафию сегодня",
@@ -99,7 +99,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.EventsView
             textName = itemView.findViewById(R.id.text_events_name);
         }
 
-        public void onBind(Events events) {
+        public void onBind(Event events) {
             imagePhoto.setImageResource(events.getEventPhoto());
             textName.setText(events.getEventName());
         }
