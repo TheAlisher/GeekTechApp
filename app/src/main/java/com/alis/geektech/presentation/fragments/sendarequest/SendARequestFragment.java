@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.alis.geektech.R;
 import com.alis.geektech.presentation.authentication.AuthenticationFragment;
@@ -66,17 +67,15 @@ public class SendARequestFragment extends Fragment {
             if (editPhoneNumber.getText().toString().isEmpty()) {
                 inputLayoutName.setError("Заполните");
             }
-        } else  {
+        } else {
             inputLayoutName.setErrorEnabled(false);
             inputLayoutPhoneNumber.setErrorEnabled(false);
             if (FirebaseAuth.getInstance().getCurrentUser() == null) {
                 AuthenticationFragment.start(requireActivity(), R.id.action_sendARequestFragment_to_authenticationFragment);
             } else {
                 HomeFragment.start(requireActivity(), R.id.action_sendARequestFragment_to_navigation_home);
+                Toast.makeText(getContext(), "Заявка отправлена", Toast.LENGTH_SHORT).show();
             }
-            Navigation
-                    .findNavController(requireActivity(), R.id.nav_host_fragment)
-                    .navigate(R.id.action_sendARequestFragment_to_navigation_home);
         }
     }
 }
