@@ -82,7 +82,16 @@ public class SignInFragment extends Fragment {
     }
 
     private void clickSignIn() {
-        HomeFragment.start(requireActivity(), R.id.action_authenticationFragment_to_navigation_home);
+        if (editPassword.getText().toString().isEmpty() || editUsername.getText().toString().isEmpty()) {
+            if (editUsername.getText().toString().isEmpty()) {
+                editUsername.setError("Заполните");
+            }
+            if (editPassword.getText().toString().isEmpty()) {
+                editPassword.setError("Заполните");
+            }
+        } else {
+            HomeFragment.start(requireActivity(), R.id.action_authenticationFragment_to_navigation_home);
+        }
     }
 
     private void createRequest() {
