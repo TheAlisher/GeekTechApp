@@ -13,7 +13,6 @@ import com.alis.geektech.R;
 import com.alis.geektech.models.Project;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.ProjectsViewHolder> {
 
@@ -35,7 +34,7 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.Projec
     @Override
     public ProjectsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ProjectsViewHolder(LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_projects, parent, false));
+                .inflate(R.layout.list_projects_item, parent, false));
     }
 
     @Override
