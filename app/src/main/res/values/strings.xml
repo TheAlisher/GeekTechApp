@@ -8,16 +8,20 @@
     <string name="title_profile">Профиль</string>
 
     <!--HelpFragment-->
+    <string name="text_geek_help">GeekHelp</string>
 
     <!--AddProblemFragment-->
 
     <!--EventsFragment-->
+    <string name="text_geek_events">GeekEvents</string>
+
+    <!--list_events_item-->
+    <string name="contentDescription_image_events">Image events</string>
 
     <!--QRScannerFragment-->
 
     <!--InOfficeFragment-->
-    <string name="button_who_will_eat">Кто будет кушать?</string>
-    <string name="button_going_to_market">Я в магазин</string>
+    <string name="hint_search_student">Поиск студента…</string>
 
     <!--ChatFragment-->
 

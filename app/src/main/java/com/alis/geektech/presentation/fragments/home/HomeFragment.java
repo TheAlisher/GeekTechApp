@@ -29,7 +29,7 @@ public class HomeFragment extends Fragment {
                 .navigate(action);
     }
 
-    private ViewPager viewPager;
+    public static ViewPager viewPager;
     public static int pagerCurrentItem;
 
     public HomeFragment() {
