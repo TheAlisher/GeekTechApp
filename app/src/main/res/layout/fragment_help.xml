@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/White"
+        android:background="@color/defaultNav"
         android:elevation="10dp"
         android:gravity="center_horizontal">
 
@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/text_geek_help"
-                android:textColor="@color/Black"
+                android:textColor="@color/defaultTextIcon"
                 android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -47,9 +47,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_help"
         android:layout_width="match_parent"
-        android:background="@color/White"
-        tools:listitem="@layout/list_help_item"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="@color/background_main"
+        tools:listitem="@layout/list_help_item" />
 
 
 </LinearLayout>

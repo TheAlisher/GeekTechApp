@@ -7,6 +7,7 @@ public class AppPreferences {
 
     public static final String PREF_IS_FIRST_LAUNCH = "is_first_launch";
     public static final String PREF_IN_OFFICE_OR_NOT = "in_office_or_not";
+    public static final String PREF_IS_DARK_MODE = "is_dark_mode";
 
     private SharedPreferences preferences;
 
@@ -32,4 +33,13 @@ public class AppPreferences {
     public void setInOffice(boolean flag) {
         preferences.edit().putBoolean(PREF_IN_OFFICE_OR_NOT, flag).apply();
     }
+
+    public void setDarkLight(boolean flag) {
+        preferences.edit().putBoolean(PREF_IS_DARK_MODE, flag).apply();
+    }
+
+    public boolean isDarkMode() {
+        return preferences.getBoolean(PREF_IS_DARK_MODE, false);
+    }
+
 }

@@ -24,10 +24,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="11dp"
-            android:background="@color/White"
+            android:background="@color/defaultCard"
             android:elevation="10dp"
             app:iconifiedByDefault="false"
-            app:queryBackground="@color/White"
+            app:queryBackground="@color/defaultCard"
             app:queryHint="@string/hint_search_student" />
 
 

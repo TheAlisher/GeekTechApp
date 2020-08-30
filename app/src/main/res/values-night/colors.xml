@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimary">#03DAC5</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
 
-    <color name="background_main">@color/White</color>
-    <color name="defaultNav">@color/White</color>
-    <color name="defaultTextIcon">@color/Black</color>
-    <color name="defaultStroke">@color/Navy</color>
-    <color name="defaultCard">@color/White</color>
+    <color name="background_main">@color/DarkGrey</color>
+    <color name="defaultNav">@color/DarkGrey</color>
+    <color name="defaultTextIcon">@color/White</color>
+    <color name="defaultStroke">@color/DeepSkyBlue</color>
+    <color name="defaultCard">@color/DarkPrimary</color>
 
     <color name="White">#FFFFFF</color>
     <color name="Black">#000000</color>

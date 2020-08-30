@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:minLines="1"
     android:paddingStart="8dp"
-    android:textColor="@color/Black"
+    android:textColor="@color/defaultTextIcon"
     android:textSize="16sp">
 
 

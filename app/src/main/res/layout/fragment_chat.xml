@@ -39,8 +39,9 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="20dp"
                 android:ellipsize="end"
+                android:gravity="center_vertical"
                 android:maxLines="1"
-                android:textColor="@color/Black"
+                android:textColor="@color/defaultTextIcon"
                 android:textSize="16sp" />
 
 
@@ -50,6 +51,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout_chat_send_message"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,13 +62,14 @@
         app:boxCornerRadiusBottomStart="30dp"
         app:boxCornerRadiusTopEnd="30dp"
         app:boxCornerRadiusTopStart="30dp"
-        app:boxStrokeColor="@color/Navy"
+        app:boxStrokeColor="@color/defaultStroke"
         app:endIconDrawable="@drawable/icon_send"
         app:endIconMode="custom"
         app:hintEnabled="false"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <EditText
+            android:id="@+id/edit_chat_send_message"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:autofillHints="@string/hint_send_message"

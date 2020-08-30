@@ -57,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:background="@color/White"
+            android:background="@color/defaultCard"
             android:elevation="5dp"
             android:textSize="20sp" />
 
@@ -102,11 +102,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:textSize="16sp"
             android:text="@string/button_save"
-            android:textColor="@color/Black"
+            android:textColor="@color/defaultTextIcon"
+            android:textSize="16sp"
             app:cornerRadius="50dp"
-            app:strokeColor="@color/Navy"
+            app:strokeColor="@color/defaultStroke"
             app:strokeWidth="1dp" />
 
 

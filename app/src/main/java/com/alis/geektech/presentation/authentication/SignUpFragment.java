@@ -55,6 +55,26 @@ public class SignUpFragment extends Fragment {
     }
 
     private void clickSignUp() {
-        HomeFragment.start(requireActivity(), R.id.action_authenticationFragment_to_navigation_home);
+        if (
+                editName.getText().toString().isEmpty() ||
+                        editEmail.getText().toString().isEmpty() ||
+                        editPhoneNumber.getText().toString().isEmpty() ||
+                        editPhoneNumber.getText().toString().isEmpty()
+        ) {
+            if (editName.getText().toString().isEmpty()) {
+                editName.setError("Заполните");
+            }
+            if (editEmail.getText().toString().isEmpty()) {
+                editEmail.setError("Заполните");
+            }
+            if (editPhoneNumber.getText().toString().isEmpty()) {
+                editPhoneNumber.setError("Заполните");
+            }
+            if (editPassword.getText().toString().isEmpty()) {
+                editPassword.setError("Заполните");
+            }
+        } else {
+            HomeFragment.start(requireActivity(), R.id.action_authenticationFragment_to_navigation_home);
+        }
     }
 }

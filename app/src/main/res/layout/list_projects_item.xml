@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/White"
+    app:cardBackgroundColor="@color/defaultCard"
     app:cardCornerRadius="20dp"
     app:cardElevation="10dp"
     app:cardUseCompatPadding="true">
@@ -15,9 +15,9 @@
         <ImageView
             android:id="@+id/row_image"
             android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
-            android:layout_height="80dp"
             android:contentDescription="@string/contentDescription_icon_project" />
 
         <LinearLayout
@@ -34,7 +34,7 @@
                 android:layout_marginTop="5dp"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:textColor="@color/Black"
+                android:textColor="@color/defaultTextIcon"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -45,7 +45,7 @@
                 android:layout_marginTop="5dp"
                 android:autoLink="all"
                 android:maxLines="1"
-                android:textColor="@color/Black"
+                android:textColor="@color/defaultTextIcon"
                 android:textSize="18sp" />
 
             <TextView
@@ -55,7 +55,7 @@
                 android:layout_marginTop="5dp"
                 android:autoLink="all"
                 android:maxLines="1"
-                android:textColor="@color/Black"
+                android:textColor="@color/defaultTextIcon"
                 android:textSize="18sp" />
 
 

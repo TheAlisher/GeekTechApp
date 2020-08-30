@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="20dp"
     android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/defaultCard"
     app:cardCornerRadius="10dp"
     app:cardElevation="10dp">
 
@@ -22,7 +23,7 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:text="Question"
-            android:textColor="@color/Black"
+            android:textColor="@color/defaultTextIcon"
             android:textSize="22sp"
             android:textStyle="bold" />
 
@@ -34,7 +35,7 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:text="Description"
-            android:textColor="@color/Black"
+            android:textColor="@color/defaultTextIcon"
             android:textSize="18sp" />
 
 
