@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.alis.geektech.R;
@@ -26,6 +27,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class AddProblemFragment extends Fragment {
 
+    private ImageView imageBack;
     private TextInputLayout inputLayoutTitle;
     private EditText editTitle;
     private TextInputLayout inputLayoutDescription;
@@ -48,6 +50,12 @@ public class AddProblemFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         initializationViews(view);
+        imageBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clickBack();
+            }
+        });
         buttonSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,6 +65,7 @@ public class AddProblemFragment extends Fragment {
     }
 
     private void initializationViews(View view) {
+        imageBack = view.findViewById(R.id.image_add_problem_back);
         inputLayoutTitle = view.findViewById(R.id.inputLayout_add_problem_title);
         editTitle = view.findViewById(R.id.edit_add_problem_title);
         inputLayoutDescription = view.findViewById(R.id.inputLayout_add_problem_description);
@@ -64,6 +73,12 @@ public class AddProblemFragment extends Fragment {
         inputLayoutFromWhom = view.findViewById(R.id.inputLayout_add_problem_from_whom);
         editFromWhom = view.findViewById(R.id.edit_add_problem_from_whom);
         buttonSend = view.findViewById(R.id.materialbutton_send);
+    }
+
+    private void clickBack() {
+        Navigation
+                .findNavController(requireActivity(), R.id.nav_host_fragment)
+                .navigateUp();
     }
 
     private void clickSend() {

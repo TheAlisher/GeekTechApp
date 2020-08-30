@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,11 +14,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alis.geektech.App;
 import com.alis.geektech.adapters.ProjectsAdapter;
 import com.alis.geektech.R;
 import com.alis.geektech.models.Project;
@@ -32,6 +35,7 @@ import java.util.ArrayList;
 
 public class ProfileFragment extends Fragment {
 
+    private MaterialButton buttonDayNight;
     private ImageView imageUserPhoto;
     private TextView textName;
     private ImageView imageVerified;
@@ -64,6 +68,12 @@ public class ProfileFragment extends Fragment {
         createProjectsRecycler();
         getArgumentsAndSet();
 
+        buttonDayNight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clickDayNight();
+            }
+        });
         buttonEditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,6 +90,7 @@ public class ProfileFragment extends Fragment {
     }
 
     private void initializationViews(View view) {
+        buttonDayNight = view.findViewById(R.id.button_profile_day_night);
         imageUserPhoto = view.findViewById(R.id.image_profile_user_photo);
         textName = view.findViewById(R.id.text_profile_name);
         imageVerified = view.findViewById(R.id.image_profile_verified);
@@ -108,13 +119,23 @@ public class ProfileFragment extends Fragment {
             User user = (User) getArguments().getSerializable(EditProfileFragment.ARG_USER_DATA);
             if (String.valueOf(user.getUserPhoto()).equals("2131230816")) {
                 imageUserPhoto.setImageResource(R.drawable.icon_default_user_photo);
-            } else  {
+            } else {
                 Glide.with(requireContext()).load(user.getUserPhoto()).circleCrop().into(imageUserPhoto);
                 imageUserPhotoURI = user.getUserPhoto();
             }
             textName.setText(user.getUserName());
             editLevel.setText(user.getUserLevel());
             editGitHub.setText(user.getUserGitHub());
+        }
+    }
+
+    private void clickDayNight() {
+        if (App.appPreferences.isDarkMode()) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            App.appPreferences.setDarkLight(false);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            App.appPreferences.setDarkLight(true);
         }
     }
 

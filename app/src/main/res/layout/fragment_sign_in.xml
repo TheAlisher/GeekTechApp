@@ -27,14 +27,18 @@
         android:hint="@string/hint_enter_password"
         android:inputType="textPassword" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_signIn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
         android:text="@string/button_sign_in"
-        android:textSize="15sp" />
+        android:textColor="@color/defaultTextIcon"
+        android:textSize="15sp"
+        app:cornerRadius="50dp"
+        app:strokeColor="@color/defaultStroke" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_signIn_with"
@@ -46,7 +50,7 @@
         android:drawablePadding="40dp"
         android:text="@string/button_sign_in_with"
         android:textAllCaps="false"
-        android:textColor="@color/Black"
+        android:textColor="@color/defaultTextIcon"
         android:textSize="16sp"
         app:strokeColor="@color/Black"
         app:strokeWidth="1dp" />

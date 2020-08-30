@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardStudents"
     android:layout_width="match_parent"
     android:layout_height="100dp"
     android:layout_margin="10dp"
-    android:id="@+id/cardStudents"
-    android:background="@color/White"
     android:foreground="?attr/selectableItemBackground"
-    app:cardBackgroundColor="@color/White"
+    app:cardBackgroundColor="@color/defaultCard"
     app:cardCornerRadius="5dp"
     app:cardElevation="10dp">
 
@@ -30,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:textColor="@color/Black"
+            android:textColor="@color/defaultTextIcon"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/text_students_inOffice_or_not"
             app:layout_constraintLeft_toRightOf="@+id/image_students_user_photo"

@@ -59,7 +59,7 @@ public class ProblemFragment extends Fragment {
     }
 
     private void initializationViews(View view) {
-        imageBack = view.findViewById(R.id.image_promblem_back);
+        imageBack = view.findViewById(R.id.image_problem_back);
         textTitle = view.findViewById(R.id.text_problem_title);
         textDescription = view.findViewById(R.id.text_problem_description);
         textFromWhom = view.findViewById(R.id.text_problem_from_whom);

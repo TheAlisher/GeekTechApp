@@ -4,9 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
     android:orientation="vertical"
     tools:context=".presentation.fragments.home.help.addproblem.AddProblemFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_add_problem_back"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:src="@drawable/icon_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputLayout_add_problem_title"
@@ -16,9 +31,10 @@
         android:layout_marginTop="50dp"
         app:boxCornerRadiusBottomEnd="50dp"
         app:boxCornerRadiusBottomStart="50dp"
+        android:layout_margin="20dp"
         app:boxCornerRadiusTopEnd="50dp"
         app:boxCornerRadiusTopStart="50dp"
-        app:boxStrokeColor="@color/Navy"
+        app:boxStrokeColor="@color/defaultStroke"
         app:boxStrokeErrorColor="@android:color/holo_red_light"
         app:errorIconDrawable="@null"
         app:hintEnabled="false">
@@ -42,9 +58,10 @@
         android:layout_marginTop="10dp"
         app:boxCornerRadiusBottomEnd="50dp"
         app:boxCornerRadiusBottomStart="50dp"
+        android:layout_margin="20dp"
         app:boxCornerRadiusTopEnd="50dp"
         app:boxCornerRadiusTopStart="50dp"
-        app:boxStrokeColor="@color/Navy"
+        app:boxStrokeColor="@color/defaultStroke"
         app:boxStrokeErrorColor="@android:color/holo_red_light"
         app:errorIconDrawable="@null"
         app:hintEnabled="false">
@@ -68,9 +85,11 @@
         android:layout_marginTop="10dp"
         app:boxCornerRadiusBottomEnd="50dp"
         app:boxCornerRadiusBottomStart="50dp"
+        android:layout_margin="20dp"
+
         app:boxCornerRadiusTopEnd="50dp"
         app:boxCornerRadiusTopStart="50dp"
-        app:boxStrokeColor="@color/Navy"
+        app:boxStrokeColor="@color/defaultStroke"
         app:boxStrokeErrorColor="@android:color/holo_red_light"
         app:errorIconDrawable="@null"
         app:hintEnabled="false">
@@ -93,9 +112,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="60dp"
         android:text="@string/text_send"
-        android:textColor="@color/Black"
+        android:textColor="@color/defaultTextIcon"
         app:cornerRadius="50dp"
-        app:strokeColor="@color/Navy"
+        app:strokeColor="@color/defaultStroke"
         app:strokeWidth="1dp" />
 
 

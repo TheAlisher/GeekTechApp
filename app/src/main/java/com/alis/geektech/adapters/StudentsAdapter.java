@@ -31,7 +31,7 @@ public class StudentsAdapter extends RecyclerView.Adapter<StudentsAdapter.Studen
     private void addItem() {
         User student1 = new User(
                 "2131230816",
-                "Aдильхан",
+                "Aдилхан",
                 true,
                 true
         );

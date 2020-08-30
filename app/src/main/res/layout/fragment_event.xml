@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:textColor="@color/Black"
+        android:textColor="@color/defaultTextIcon"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:textColor="@color/Black"
+        android:textColor="@color/defaultTextIcon"
         android:textSize="16sp" />
 
     <TextView
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_margin="20dp"
-        android:textColor="@color/Black"
+        android:textColor="@color/defaultTextIcon"
         android:textSize="15sp" />
 
     <TextView
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_margin="20dp"
-        android:textColor="@color/Black"
+        android:textColor="@color/defaultTextIcon"
         android:textSize="15sp" />
 
 
